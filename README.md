@@ -20,10 +20,14 @@ Use any Python environment with Django and DRF installed, then:
 
 ```powershell
 python manage.py migrate
-python manage.py seed_demo_data
-python manage.py createsuperuser
+python manage.py bootstrap_demo
 python manage.py runserver
 ```
+
+Default demo admin credentials after `bootstrap_demo`:
+
+- email: `admin@gmail.com`
+- password: `admin123`
 
 ## API
 
@@ -41,4 +45,3 @@ python manage.py runserver
 - `POST /api/orders/`
 - `GET /api/orders/<id>/`
 - `POST /api/feedback/`
-

@@ -1,0 +1,202 @@
+:root {
+  --primary: #5d3325;
+  --primary-fg: #ffffff;
+  --body-bg: #f6efe8;
+  --body-quiet-color: #6f5a4d;
+  --body-medium-color: #4d3a2f;
+  --body-fg: #211712;
+  --header-color: #ffffff;
+  --header-branding-color: #ffffff;
+  --header-bg: linear-gradient(135deg, #2f170f 0%, #764632 100%);
+  --accent: #d36f4f;
+  --link-fg: #8f4a31;
+  --link-hover-color: #5d3325;
+  --hairline-color: rgba(93, 51, 37, 0.14);
+  --border-color: rgba(93, 51, 37, 0.14);
+  --darkened-bg: #efe4da;
+  --selected-bg: #fff8f3;
+  --selected-row: #fff4eb;
+  --button-bg: #8f4a31;
+  --button-fg: #ffffff;
+  --default-button-bg: #5d3325;
+  --default-button-hover-bg: #47261a;
+}
+
+html[data-theme="dark"] {
+  --body-bg: #211712;
+  --body-fg: #f5ede7;
+  --body-quiet-color: #c9b3a3;
+  --body-medium-color: #ebd8cb;
+  --hairline-color: rgba(255, 255, 255, 0.1);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --darkened-bg: #30231d;
+  --selected-bg: #372820;
+  --selected-row: #3c2c24;
+  --link-fg: #ffb08d;
+  --link-hover-color: #ffd4bf;
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  font-family: "Manrope", sans-serif;
+}
+
+body.login {
+  background:
+    radial-gradient(circle at top, rgba(211, 111, 79, 0.18), transparent 32%),
+    linear-gradient(180deg, #fffaf6 0%, #f6efe8 45%, #efe4da 100%);
+}
+
+#header {
+  box-shadow: 0 18px 40px rgba(47, 23, 15, 0.18);
+}
+
+.sweetadmin-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.sweetadmin-brand-mark {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.sweetadmin-brand-copy {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.sweetadmin-brand-copy strong {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.sweetadmin-brand-copy span {
+  margin-top: 3px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+div.breadcrumbs {
+  background: rgba(255, 255, 255, 0.72);
+  border-bottom: 1px solid var(--hairline-color);
+  color: var(--body-medium-color);
+}
+
+.module,
+#changelist-filter,
+.inline-group,
+.submit-row,
+#content-related,
+#content-main .form-row,
+.login #content-main {
+  border-radius: 20px;
+}
+
+.module,
+#changelist-filter,
+.inline-group,
+#content-related,
+#content-main .form-row,
+.login #content-main {
+  box-shadow: 0 18px 36px rgba(47, 23, 15, 0.08);
+}
+
+.login #container {
+  min-height: 100vh;
+  background: transparent;
+}
+
+.login #header {
+  width: min(1080px, calc(100% - 32px));
+  margin: 24px auto 0;
+  border-radius: 28px 28px 0 0;
+}
+
+.login #content {
+  width: min(1080px, calc(100% - 32px));
+  margin: 0 auto 32px;
+}
+
+.login #content-main {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(93, 51, 37, 0.12);
+  backdrop-filter: blur(10px);
+}
+
+.login .form-row {
+  padding: 0;
+  border: none;
+  margin-bottom: 16px;
+}
+
+.login .form-row label {
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: var(--body-medium-color);
+}
+
+.login .form-row input {
+  min-height: 50px;
+  border-radius: 14px;
+  border: 1px solid rgba(93, 51, 37, 0.16);
+  padding: 12px 14px;
+  background: #fff;
+}
+
+.login .submit-row {
+  padding: 0;
+  margin-top: 20px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.login .submit-row input {
+  width: 100%;
+  min-height: 50px;
+  border-radius: 14px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  box-shadow: 0 16px 30px rgba(93, 51, 37, 0.2);
+}
+
+.button,
+input[type="submit"],
+input[type="button"],
+.submit-row input,
+a.button {
+  border-radius: 12px;
+}
+
+@media (max-width: 640px) {
+  .login #header,
+  .login #content {
+    width: calc(100% - 24px);
+  }
+
+  .login #content-main {
+    padding: 22px;
+  }
+
+  .sweetadmin-brand-copy strong {
+    font-size: 18px;
+  }
+}

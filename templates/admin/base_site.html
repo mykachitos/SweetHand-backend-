@@ -1,0 +1,26 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}
+SweetHand Admin
+{% endblock %}
+
+{% block extrastyle %}
+{{ block.super }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'sweetadmin/admin.css' %}">
+{% endblock %}
+
+{% block branding %}
+<div class="sweetadmin-brand">
+  <span class="sweetadmin-brand-mark">S</span>
+  <div class="sweetadmin-brand-copy">
+    <strong>SweetHand</strong>
+    <span>Панель управления</span>
+  </div>
+</div>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

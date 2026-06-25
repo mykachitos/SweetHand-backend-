@@ -5,10 +5,15 @@ from apps.accounts.models import User
 
 
 class UserSerializer(serializers.ModelSerializer):
+    is_admin = serializers.SerializerMethodField()
+
     class Meta:
         model = User
-        fields = ("id", "email", "name", "phone", "date_joined")
-        read_only_fields = ("id", "date_joined", "email")
+        fields = ("id", "email", "name", "phone", "date_joined", "is_admin")
+        read_only_fields = ("id", "date_joined", "email", "is_admin")
+
+    def get_is_admin(self, obj):
+        return bool(obj.is_staff or obj.is_superuser)
 
 
 class RegisterSerializer(serializers.ModelSerializer):
