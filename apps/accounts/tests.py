@@ -1,7 +1,11 @@
+from io import StringIO
+
+from django.core.management import call_command
 from rest_framework import status
 from rest_framework.test import APITestCase
 
 from apps.accounts.models import User
+from apps.catalog.models import Category, Product
 
 
 class AccountsApiTests(APITestCase):
@@ -37,3 +41,22 @@ class AccountsApiTests(APITestCase):
         self.assertEqual(patch_response.status_code, status.HTTP_200_OK)
         self.assertEqual(User.objects.get(email="user@example.com").name, "Updated Name")
 
+
+class BootstrapProjectDataCommandTests(APITestCase):
+    def test_bootstrap_project_data_loads_fixture_once(self):
+        first_output = StringIO()
+        second_output = StringIO()
+
+        call_command("bootstrap_project_data", stdout=first_output)
+
+        self.assertEqual(User.objects.count(), 2)
+        self.assertEqual(Category.objects.count(), 4)
+        self.assertEqual(Product.objects.count(), 22)
+        self.assertIn("Project data fixture loaded successfully.", first_output.getvalue())
+
+        call_command("bootstrap_project_data", stdout=second_output)
+
+        self.assertEqual(User.objects.count(), 2)
+        self.assertEqual(Category.objects.count(), 4)
+        self.assertEqual(Product.objects.count(), 22)
+        self.assertIn("Skipped fixture load because the database already has data", second_output.getvalue())

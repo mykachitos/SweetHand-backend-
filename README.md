@@ -36,7 +36,7 @@ Default demo admin credentials after `bootstrap_demo`:
 
 Recommended Render setup:
 
-- `Build Command`: `pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate`
+- `Build Command`: `pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate && python manage.py bootstrap_project_data`
 - `Start Command`: `gunicorn config.wsgi:application --bind 0.0.0.0:$PORT`
 
 Environment variables:
@@ -45,13 +45,9 @@ Environment variables:
 - `DEBUG=false`
 - `CORS_ALLOWED_ORIGINS=https://your-frontend.vercel.app`
 - `CSRF_TRUSTED_ORIGINS=https://your-frontend.vercel.app`
-- `DATABASE_URL=<Render Internal Database URL>`
+- `DATABASE_URL=<Neon PostgreSQL URL or Render Internal Database URL>`
 
-If you create a fresh Render PostgreSQL database, deploy the service and then run:
-
-```powershell
-python manage.py bootstrap_demo
-```
+`bootstrap_project_data` loads [fixtures/project_data.json](/C:/Users/admin/Desktop/projects/sherstuk/diplom/backend/fixtures/project_data.json) only when the database is empty, so free Render deployments do not need Shell access to import the initial catalog and users.
 
 ## API
 

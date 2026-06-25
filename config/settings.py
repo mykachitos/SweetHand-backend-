@@ -1,7 +1,10 @@
 import os
 from pathlib import Path
 
-import dj_database_url
+try:
+    import dj_database_url
+except ImportError:  # pragma: no cover - optional for local SQLite-only runs
+    dj_database_url = None
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -90,6 +93,8 @@ ASGI_APPLICATION = "config.asgi.application"
 
 database_url = os.getenv("DATABASE_URL", "").strip()
 if database_url:
+    if dj_database_url is None:
+        raise RuntimeError("dj-database-url must be installed when DATABASE_URL is set.")
     DATABASES = {
         "default": dj_database_url.parse(
             database_url,
@@ -123,6 +128,7 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_DIRS = [BASE_DIR / "static"]
+FIXTURE_DIRS = [BASE_DIR / "fixtures"]
 STORAGES = {
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
