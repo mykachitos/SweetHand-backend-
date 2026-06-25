@@ -1,0 +1,576 @@
+[
+  {
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$1200000$MJerXbrOmfg04LXAfobCrk$YutCpY9nHGw6fvJmNHh02BRS5f3gkF2R5MMJz6b2GRo=",
+      "last_login": "2026-06-25 11:00:01.477292",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-06-21 13:44:02.087068",
+      "email": "admin@gmail.com",
+      "name": "Admin",
+      "phone": "+79996169999"
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$1200000$cC7hg9HCWmD0YLiEV4uNqc$+0g1az40u5a5lAYELlRTS5Teyh1l4SbSMMnxgxotG48=",
+      "last_login": "2026-06-25 11:23:48.897326",
+      "is_superuser": true,
+      "username": "yliksher228",
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2026-06-25 11:04:25.918972",
+      "email": "yliksher228@gmail.com",
+      "name": "",
+      "phone": ""
+    }
+  },
+  {
+    "model": "authtoken.token",
+    "pk": "ae7cb268646a3cd0ab580acb185993e445c9042b",
+    "fields": {
+      "created": "2026-06-21 13:44:02.663155",
+      "user": 1
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.485757",
+      "updated_at": "2026-06-25 10:59:15.663538",
+      "name": "Торты",
+      "slug": "category-1",
+      "sort_order": 1
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.550452",
+      "updated_at": "2026-06-25 10:59:15.700924",
+      "name": "Пирожные",
+      "slug": "category-2",
+      "sort_order": 2
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 4,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.610366",
+      "updated_at": "2026-06-25 10:59:15.736053",
+      "name": "Конфеты",
+      "slug": "category-3",
+      "sort_order": 3
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 5,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.657519",
+      "updated_at": "2026-06-25 10:59:15.762468",
+      "name": "Печенье",
+      "slug": "category-4",
+      "sort_order": 4
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.493967",
+      "updated_at": "2026-06-25 10:59:15.669629",
+      "category": 2,
+      "name": "Малиновый сон",
+      "slug": "category-1-1",
+      "description": "Нежный бисквит с малиновым конфитюром и сливочным кремом.",
+      "price": "2800",
+      "original_price": "3300",
+      "weight": "1.2 кг",
+      "image_url": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=900&auto=format&fit=crop",
+      "badge": "hit",
+      "allergens": "Глютен, молоко, яйца",
+      "is_month_pick": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.501141",
+      "updated_at": "2026-06-25 10:59:15.673832",
+      "category": 2,
+      "name": "Три шоколада",
+      "slug": "category-1-2",
+      "description": "Муссовый торт на основе белого, молочного и темного шоколада.",
+      "price": "3400",
+      "original_price": "3900",
+      "weight": "1.4 кг",
+      "image_url": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=900&auto=format&fit=crop",
+      "badge": "new",
+      "allergens": "Молоко, яйца",
+      "is_month_pick": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.507963",
+      "updated_at": "2026-06-25 10:59:15.677526",
+      "category": 2,
+      "name": "Чизкейк Нью-Йорк",
+      "slug": "category-1-3",
+      "description": "Классический чизкейк на песочной основе с ванильными нотами.",
+      "price": "2400",
+      "original_price": "2700",
+      "weight": "1.0 кг",
+      "image_url": "https://images.unsplash.com/photo-1567171466295-4afa63d45416?w=900&auto=format&fit=crop",
+      "badge": "hit",
+      "allergens": "Глютен, молоко, яйца",
+      "is_month_pick": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.516550",
+      "updated_at": "2026-06-25 10:59:15.687558",
+      "category": 2,
+      "name": "Красный бархат",
+      "slug": "category-1-4",
+      "description": "Яркий бархатный торт с крем-чизом и ягодной прослойкой.",
+      "price": "2950",
+      "original_price": "2950",
+      "weight": "1.2 кг",
+      "image_url": "https://images.unsplash.com/photo-1586788680434-30d324ee2991?w=900&auto=format&fit=crop",
+      "badge": "",
+      "allergens": "Глютен, молоко, яйца",
+      "is_month_pick": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 6,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.529777",
+      "updated_at": "2026-06-25 10:59:15.691345",
+      "category": 2,
+      "name": "Медовик классический",
+      "slug": "category-1-5",
+      "description": "Тонкие медовые коржи и воздушный сметанный крем.",
+      "price": "2200",
+      "original_price": "2500",
+      "weight": "1.0 кг",
+      "image_url": "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=900&auto=format&fit=crop",
+      "badge": "hit",
+      "allergens": "Глютен, молоко, яйца",
+      "is_month_pick": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 7,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.537592",
+      "updated_at": "2026-06-25 10:59:15.696092",
+      "category": 2,
+      "name": "Фисташка и клубника",
+      "slug": "category-1-6",
+      "description": "Фисташковый бисквит, клубничный кули и воздушный крем.",
+      "price": "3600",
+      "original_price": "4100",
+      "weight": "1.3 кг",
+      "image_url": "https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=900&auto=format&fit=crop",
+      "badge": "new",
+      "allergens": "Глютен, молоко, орехи, яйца",
+      "is_month_pick": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 8,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.562288",
+      "updated_at": "2026-06-25 10:59:15.705100",
+      "category": 3,
+      "name": "Макаронс ассорти",
+      "slug": "category-2-1",
+      "description": "Ассорти из шести вкусов в подарочной коробке.",
+      "price": "980",
+      "original_price": "1200",
+      "weight": "12 шт",
+      "image_url": "https://images.unsplash.com/photo-1569864358642-9d1684040f43?w=900&auto=format&fit=crop",
+      "badge": "hit",
+      "allergens": "Миндаль, яйца",
+      "is_month_pick": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 9,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.568122",
+      "updated_at": "2026-06-25 10:59:15.710482",
+      "category": 3,
+      "name": "Эклеры шоколадные",
+      "slug": "category-2-2",
+      "description": "Эклеры с насыщенным шоколадным кремом и тонкой глазурью.",
+      "price": "650",
+      "original_price": "790",
+      "weight": "6 шт",
+      "image_url": "https://images.unsplash.com/photo-1612203985729-70726954388c?w=900&auto=format&fit=crop",
+      "badge": "",
+      "allergens": "Глютен, молоко, яйца",
+      "is_month_pick": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 10,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.579009",
+      "updated_at": "2026-06-25 10:59:15.716021",
+      "category": 3,
+      "name": "Павлова",
+      "slug": "category-2-3",
+      "description": "Хрустящая меренга с кремом и свежими ягодами.",
+      "price": "810",
+      "original_price": "950",
+      "weight": "4 шт",
+      "image_url": "https://images.unsplash.com/photo-1488477304112-4944851de03d?w=900&auto=format&fit=crop",
+      "badge": "new",
+      "allergens": "Молоко, яйца",
+      "is_month_pick": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 11,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.585695",
+      "updated_at": "2026-06-25 10:59:15.722915",
+      "category": 3,
+      "name": "Лимонный тарт",
+      "slug": "category-2-4",
+      "description": "Песочная основа, лимонный курд и лёгкая меренга.",
+      "price": "690",
+      "original_price": "690",
+      "weight": "4 шт",
+      "image_url": "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=900&auto=format&fit=crop",
+      "badge": "",
+      "allergens": "Глютен, молоко, яйца",
+      "is_month_pick": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 12,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.594447",
+      "updated_at": "2026-06-25 10:59:15.727321",
+      "category": 3,
+      "name": "Профитроли ванильные",
+      "slug": "category-2-5",
+      "description": "Мини-профитроли с заварным кремом и сахарной пудрой.",
+      "price": "720",
+      "original_price": "860",
+      "weight": "10 шт",
+      "image_url": "https://images.unsplash.com/photo-1623246123320-0d6636755796?w=900&auto=format&fit=crop",
+      "badge": "hit",
+      "allergens": "Глютен, молоко, яйца",
+      "is_month_pick": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 13,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.600239",
+      "updated_at": "2026-06-25 10:59:15.731741",
+      "category": 3,
+      "name": "Капкейки ванильные",
+      "slug": "category-2-6",
+      "description": "Нежные ванильные капкейки с кремом крем-чиз.",
+      "price": "660",
+      "original_price": "760",
+      "weight": "6 шт",
+      "image_url": "https://images.unsplash.com/photo-1426869981800-95ebf51ce900?w=900&auto=format&fit=crop",
+      "badge": "",
+      "allergens": "Глютен, молоко, яйца",
+      "is_month_pick": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 14,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.616995",
+      "updated_at": "2026-06-25 10:59:15.740121",
+      "category": 4,
+      "name": "Трюфели ручной работы",
+      "slug": "category-3-1",
+      "description": "Темный шоколад, сливки и натуральная ваниль.",
+      "price": "890",
+      "original_price": "1040",
+      "weight": "200 г",
+      "image_url": "https://images.unsplash.com/photo-1548907040-4baa42d10919?w=900&auto=format&fit=crop",
+      "badge": "hit",
+      "allergens": "Молоко",
+      "is_month_pick": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 15,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.623337",
+      "updated_at": "2026-06-25 10:59:15.744575",
+      "category": 4,
+      "name": "Клубника в шоколаде",
+      "slug": "category-3-2",
+      "description": "Свежая клубника, покрытая бельгийским шоколадом.",
+      "price": "1290",
+      "original_price": "1490",
+      "weight": "12 шт",
+      "image_url": "https://images.unsplash.com/photo-1572383672419-ab35444a6934?w=900&auto=format&fit=crop",
+      "badge": "hit",
+      "allergens": "Молоко",
+      "is_month_pick": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 16,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.632022",
+      "updated_at": "2026-06-25 10:59:15.748655",
+      "category": 4,
+      "name": "Конфеты пралине",
+      "slug": "category-3-3",
+      "description": "Шоколадные корпуса с фундуком и карамельным пралине.",
+      "price": "950",
+      "original_price": "950",
+      "weight": "200 г",
+      "image_url": "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=900&auto=format&fit=crop",
+      "badge": "",
+      "allergens": "Молоко, орехи",
+      "is_month_pick": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 17,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.639479",
+      "updated_at": "2026-06-25 10:59:15.753614",
+      "category": 4,
+      "name": "Шоколадные медальоны",
+      "slug": "category-3-4",
+      "description": "Тонкие плиточки шоколада с орехами и сублимированными ягодами.",
+      "price": "760",
+      "original_price": "920",
+      "weight": "150 г",
+      "image_url": "https://images.unsplash.com/photo-1623161122168-9b5c5b1b6e34?w=900&auto=format&fit=crop",
+      "badge": "new",
+      "allergens": "Молоко, орехи",
+      "is_month_pick": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 18,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.650691",
+      "updated_at": "2026-06-25 10:59:15.758021",
+      "category": 4,
+      "name": "Рафаэлло домашние",
+      "slug": "category-3-5",
+      "description": "Кокосовые конфеты с нежной начинкой и миндалем.",
+      "price": "920",
+      "original_price": "1080",
+      "weight": "180 г",
+      "image_url": "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?w=900&auto=format&fit=crop",
+      "badge": "hit",
+      "allergens": "Молоко, миндаль, кокос",
+      "is_month_pick": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 19,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.663690",
+      "updated_at": "2026-06-25 10:59:15.766681",
+      "category": 5,
+      "name": "Имбирное печенье",
+      "slug": "category-4-1",
+      "description": "Ароматное печенье с корицей, имбирем и глазурью.",
+      "price": "420",
+      "original_price": "520",
+      "weight": "300 г",
+      "image_url": "https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=900&auto=format&fit=crop",
+      "badge": "",
+      "allergens": "Глютен, яйца",
+      "is_month_pick": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 20,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.670566",
+      "updated_at": "2026-06-25 10:59:15.771401",
+      "category": 5,
+      "name": "Печенье с шоколадом",
+      "slug": "category-4-2",
+      "description": "Хрустящее печенье с крупными кусочками темного шоколада.",
+      "price": "450",
+      "original_price": "560",
+      "weight": "300 г",
+      "image_url": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=900&auto=format&fit=crop",
+      "badge": "hit",
+      "allergens": "Глютен, молоко, яйца",
+      "is_month_pick": true,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 21,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.675424",
+      "updated_at": "2026-06-25 10:59:15.776300",
+      "category": 5,
+      "name": "Овсяное с клюквой",
+      "slug": "category-4-3",
+      "description": "Мягкое овсяное печенье с клюквой и белым шоколадом.",
+      "price": "460",
+      "original_price": "460",
+      "weight": "250 г",
+      "image_url": "https://images.unsplash.com/photo-1490567674331-72de84e93f3f?w=900&auto=format&fit=crop",
+      "badge": "new",
+      "allergens": "Глютен, молоко, яйца",
+      "is_month_pick": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 22,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.682373",
+      "updated_at": "2026-06-25 10:59:15.780732",
+      "category": 5,
+      "name": "Сабле ванильное",
+      "slug": "category-4-4",
+      "description": "Французское масляное печенье с ванильным ароматом.",
+      "price": "480",
+      "original_price": "560",
+      "weight": "200 г",
+      "image_url": "https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=900&auto=format&fit=crop",
+      "badge": "",
+      "allergens": "Глютен, молоко, яйца",
+      "is_month_pick": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 23,
+    "fields": {
+      "created_at": "2026-06-21 12:43:06.690760",
+      "updated_at": "2026-06-25 10:59:15.785225",
+      "category": 5,
+      "name": "Меренги цветные",
+      "slug": "category-4-5",
+      "description": "Воздушные меренги разных вкусов и цветов.",
+      "price": "410",
+      "original_price": "490",
+      "weight": "200 г",
+      "image_url": "https://images.unsplash.com/photo-1558326567-98ae2405596b?w=900&auto=format&fit=crop",
+      "badge": "hit",
+      "allergens": "Яйца",
+      "is_month_pick": false,
+      "is_active": true
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 1,
+    "fields": {
+      "created_at": "2026-06-21 13:44:31.458440",
+      "updated_at": "2026-06-21 13:44:31.458454",
+      "user": 1,
+      "number": "SW-4E765DEF39",
+      "status": "new",
+      "delivery_method": "delivery",
+      "contact_name": "admin",
+      "phone": "+79996169999",
+      "address": "Жигура 50",
+      "comment": "123",
+      "subtotal": "2770",
+      "delivery_price": "300",
+      "total": "3070",
+      "personal_data_consent": true
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "product": 8,
+      "product_name": "Макаронс ассорти",
+      "product_price": "980",
+      "product_weight": "12 шт",
+      "product_image_url": "https://images.unsplash.com/photo-1569864358642-9d1684040f43?w=900&auto=format&fit=crop",
+      "quantity": 2
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 2,
+    "fields": {
+      "order": 1,
+      "product": 10,
+      "product_name": "Павлова",
+      "product_price": "810",
+      "product_weight": "4 шт",
+      "product_image_url": "https://images.unsplash.com/photo-1488477304112-4944851de03d?w=900&auto=format&fit=crop",
+      "quantity": 1
+    }
+  }
+]
