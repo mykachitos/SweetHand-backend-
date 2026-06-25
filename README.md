@@ -24,10 +24,34 @@ python manage.py bootstrap_demo
 python manage.py runserver
 ```
 
+For local development, the project uses SQLite by default. Set `DATABASE_URL` to switch
+to PostgreSQL without changing the code.
+
 Default demo admin credentials after `bootstrap_demo`:
 
 - email: `admin@gmail.com`
 - password: `admin123`
+
+## Render deployment
+
+Recommended Render setup:
+
+- `Build Command`: `pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate`
+- `Start Command`: `gunicorn config.wsgi:application --bind 0.0.0.0:$PORT`
+
+Environment variables:
+
+- `SECRET_KEY=<your-secret>`
+- `DEBUG=false`
+- `CORS_ALLOWED_ORIGINS=https://your-frontend.vercel.app`
+- `CSRF_TRUSTED_ORIGINS=https://your-frontend.vercel.app`
+- `DATABASE_URL=<Render Internal Database URL>`
+
+If you create a fresh Render PostgreSQL database, deploy the service and then run:
+
+```powershell
+python manage.py bootstrap_demo
+```
 
 ## API
 
