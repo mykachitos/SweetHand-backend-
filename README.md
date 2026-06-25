@@ -47,7 +47,7 @@ Environment variables:
 - `CSRF_TRUSTED_ORIGINS=https://your-frontend.vercel.app`
 - `DATABASE_URL=<Neon PostgreSQL URL or Render Internal Database URL>`
 
-`bootstrap_project_data` loads [fixtures/project_data.json](/C:/Users/admin/Desktop/projects/sherstuk/diplom/backend/fixtures/project_data.json) only when the database is empty, so free Render deployments do not need Shell access to import the initial catalog and users.
+`bootstrap_project_data` loads `fixtures/project_data.json` only when the database is empty, so free Render deployments do not need Shell access to import the initial catalog and users.
 
 ## API
 
